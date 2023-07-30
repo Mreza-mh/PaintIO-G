@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="26b51daa-871d-4273-bea1-2079917b4811" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Game$ScheduleTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Game$ScheduleTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Move$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Move$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Move.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Move.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Move.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +74,7 @@
       <workItem from="1690568662958" duration="1567000" />
       <workItem from="1690625893287" duration="20174000" />
       <workItem from="1690708719756" duration="6000" />
-      <workItem from="1690709028517" duration="4648000" />
+      <workItem from="1690709028517" duration="8515000" />
     </task>
     <task id="LOCAL-00001" summary="Death codes">
       <created>1690712463046</created>
@@ -85,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690712463046</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Change SemiCircle to Pac-Man">
+      <created>1690726706008</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690726706008</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Death codes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Death codes" />
+    <MESSAGE value="Change SemiCircle to Pac-Man" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change SemiCircle to Pac-Man" />
   </component>
 </project>

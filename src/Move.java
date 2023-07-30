@@ -1,7 +1,10 @@
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 
 public class Move {
 
@@ -25,6 +28,8 @@ public class Move {
                                 case KeyEvent.VK_UP -> player.setDirection(8);
                                 case KeyEvent.VK_RIGHT -> player.setDirection(6);
                                 case KeyEvent.VK_DOWN -> player.setDirection(2);
+                                case KeyEvent.VK_SPACE -> space(mainPlayer.getX(), mainPlayer.getY(),playersList );
+
                                 default -> {
                                 }
                             }
@@ -80,6 +85,65 @@ public class Move {
             player.processMovement(tileMap, playersList);
         }
     }
+
+
+
+    boolean up = false;
+    boolean down = false;
+    boolean R = false;
+    boolean L = false;
+    boolean timer = true;
+    ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+
+
+    void space(int x, int y, ArrayList<Player> playersList) {
+        int xx = x;
+        int yy = y;
+
+        for (Player player : playersList) {
+
+            if (player instanceof MainPlayer) {
+            } else {
+                if (timer) {
+                    if (player.getDirection() == 8) {
+                        if (player.getX() == xx && player.getY() <= yy) {
+                            player.die();
+                            startSwitching();
+                        }
+                    }  if (player.getDirection() == 2) {
+                        if (player.getX() == xx && player.getY() >= yy) {
+                            player.die();
+                            startSwitching();
+                        }
+                    }if (player.getDirection() == 6) {
+                        if (player.getY() == yy && player.getX() >= xx) {
+                            player.die();
+                            startSwitching();
+                        }
+                    }  if (player.getDirection() == 4) {
+                        if (player.getY() == yy && player.getX() <= xx) {
+                            player.die();
+                            startSwitching();
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    public void startSwitching() {
+        timer = false;
+        System.out.println("off");
+        executor.schedule(() -> {
+            timer = true;
+            System.out.println("ready to fire");
+        }, 3, TimeUnit.SECONDS);
+    }
+
+
+
+
 }
 
 

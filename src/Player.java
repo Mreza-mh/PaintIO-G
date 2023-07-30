@@ -48,13 +48,13 @@ ArrayList<Tile> radTiles = new ArrayList<>();
                 tile.setRad(this);
                 radTiles.add(tile);
             } else if (tile.getOwner() == null && tile.getRad() != this) {
-                tile.getRad().die(tile);
+                tile.getRad().die();
                 tile.setRad(this);
             }
         }
     }
 
-    void die(Tile tile){
+    void die(){
 
         isAlive = false;
 
