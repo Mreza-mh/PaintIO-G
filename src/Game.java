@@ -105,42 +105,46 @@ public class Game extends JPanel {
         g.setFont(new Font(null, Font.PLAIN, 30));
 
         for (Player player : playersList) {
+            if (player.isAlive) {
 
-            drawX = (player.getX() - mainPlayer.getX()) * unitSize + ((screenWidth - unitSize) / 2);
-            drawY = (player.getY() - mainPlayer.getY()) * unitSize + ((screenHeight - unitSize) / 2);
+                drawX = (player.getX() - mainPlayer.getX()) * unitSize + ((screenWidth - unitSize) / 2);
+                drawY = (player.getY() - mainPlayer.getY()) * unitSize + ((screenHeight - unitSize) / 2);
 
-            g.setColor(player.getColor().darker());
+                g.setColor(player.getColor().darker());
 
-            g.drawString(player.getName(), drawX - (unitSize / 2), (drawY + (2 * unitSize)));
-            //shape
-            if (selectedShapee == "Square") {
-                g.fillRect(drawX, drawY, unitSize, unitSize);
-            } else if (selectedShapee == "Circle") {
-                g.fillOval(drawX, drawY, unitSize, unitSize);
-            } else if (selectedShapee == "SemiCircle") {
-                g.fillArc(drawX, drawY, unitSize, unitSize, 0, 180);
+                g.drawString(player.getName(), drawX - (unitSize / 2), (drawY + (2 * unitSize)));
+                //shape
+                if (selectedShapee == "Square") {
+                    g.fillRect(drawX, drawY, unitSize, unitSize);
+                } else if (selectedShapee == "Circle") {
+                    g.fillOval(drawX, drawY, unitSize, unitSize);
+                } else if (selectedShapee == "SemiCircle") {
+                    g.fillArc(drawX, drawY, unitSize, unitSize, 0, 180);
+                }
+
             }
-
         }
-
         int s = 0;
         int h = 52;
         int playersPerLine = 5;
         int playerCount = 0;
 
         for (Player player : playersList) {
-            g.drawString(player.getName() + "|| " + (player.getX() - 3000) + "," + (player.getY() - 3000), s, h);
-            s += 300;
-            playerCount++;
+            if (player.isAlive) {
 
-            if (playerCount == playersPerLine) {
-                s = 0;
-                h += 58;
-                playerCount = 0;
-            }}
+                g.drawString(player.getName() + "|| " + (player.getX() - 3000) + "," + (player.getY() - 3000), s, h);
+                s += 300;
+                playerCount++;
 
+                if (playerCount == playersPerLine) {
+                    s = 0;
+                    h += 58;
+                    playerCount = 0;
+                }
+            }
+
+        }
     }
-
 
     private void  Move () {
         new Move(tileMap,this,playersList,mainPlayer);

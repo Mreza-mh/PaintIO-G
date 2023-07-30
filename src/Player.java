@@ -9,6 +9,8 @@ public class Player {
     String name;
     int Direction;
     private final Color color;
+    boolean isAlive = true;
+
 
     public Player(String name) {
         this.name = name;
@@ -32,24 +34,38 @@ public class Player {
 
 
 ArrayList<Tile> ownedTiles = new ArrayList<>();
-
+ArrayList<Tile> radTiles = new ArrayList<>();
 
     public ArrayList<Tile> getOwnedTiles() {return ownedTiles;}
     public void setOwnedTiles(ArrayList<Tile> ownedTiles) {this.ownedTiles = ownedTiles;}
 
 
     public void processMovement(TileMap tileMap, ArrayList<Player> playersList) {
+        if (isAlive) {
 
 
-        Tile tile = tileMap.getTile(x, y);
-        if (tile.getOwner() != this && tile.getRad() == null) {
-            tile.setRad(this);
-        } else if (tile.getOwner() == null && tile.getRad() != this) {
-            // die
-            tile.setRad(this);
+            Tile tile = tileMap.getTile(x, y);
+            if (tile.getOwner() != this && tile.getRad() == null) {
+                tile.setRad(this);
+                radTiles.add(tile);
+            } else if (tile.getOwner() == null && tile.getRad() != this) {
+                tile.getRad().die(tile);
+                tile.setRad(this);
+            }
+        }
+    }
+
+    void die(Tile tile){
+
+        isAlive = false;
+
+        for (Tile t:ownedTiles) {
+            t.setOwner(null);
+        }
+        for (Tile t:radTiles) {
+            t.setRad(null);
         }
 
     }
-
 
 }
