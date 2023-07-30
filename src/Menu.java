@@ -58,7 +58,7 @@ public class Menu extends JPanel{
 
         JRadioButton rectangleButton = new JRadioButton("Square");
         JRadioButton circleButton = new JRadioButton("Circle");
-        JRadioButton triangleButton = new JRadioButton("SemiCircle");
+        JRadioButton triangleButton = new JRadioButton("Pac-Man");
 
         rectangleButton.addActionListener(new ShapeSelectionListener());
         circleButton.addActionListener(new ShapeSelectionListener());

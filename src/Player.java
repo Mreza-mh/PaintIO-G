@@ -43,7 +43,6 @@ ArrayList<Tile> radTiles = new ArrayList<>();
     public void processMovement(TileMap tileMap, ArrayList<Player> playersList) {
         if (isAlive) {
 
-
             Tile tile = tileMap.getTile(x, y);
             if (tile.getOwner() != this && tile.getRad() == null) {
                 tile.setRad(this);

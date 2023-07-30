@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 import java.util.Timer;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Game extends JPanel {
@@ -113,17 +114,68 @@ public class Game extends JPanel {
                 g.setColor(player.getColor().darker());
 
                 g.drawString(player.getName(), drawX - (unitSize / 2), (drawY + (2 * unitSize)));
-                //shape
+
+                //--------------------shape
+                int random = ThreadLocalRandom.current().nextInt(2) + 1;
+
                 if (selectedShapee == "Square") {
                     g.fillRect(drawX, drawY, unitSize, unitSize);
                 } else if (selectedShapee == "Circle") {
                     g.fillOval(drawX, drawY, unitSize, unitSize);
-                } else if (selectedShapee == "SemiCircle") {
-                    g.fillArc(drawX, drawY, unitSize, unitSize, 0, 180);
-                }
+                } else if (selectedShapee == "Pac-Man") {
+                    //----------------------------------------------------------------------------------------------------------
+                    if (player.getDirection() == 8) {
+                        switch (random) {
+                            case 1 -> {
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 140, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 220, 180);
+                            }
+                            case 2 -> {
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 100, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 260, 180);
+                            }
+                        }
+                    } else if (player.getDirection() == 6) {
+                        switch (random) {
+                            case 1 -> {
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 50, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 130, 180);
+                            }
+                            case 2 -> {
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 10, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 170, 180);
+                            }
+                        }
+                    } else if (player.getDirection() == 4) {
+                        switch (random) {
+                            case 1 -> {
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 230, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 310, 180);
+                            }
+                            case 2 -> {
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 190, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 350, 180);
+                            }
+                        }
 
+                    } else if (player.getDirection() == 2) {
+                        switch (random) {
+                            case 1 -> {
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 330, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 30, 180);
+                            }
+                            case 2 -> {
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 290, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 70, 180);
+                            }
+                        }
+                    }
+                }
+//----------------------------------------------------------------------------------------------------------
             }
         }
+
+// header
         int s = 0;
         int h = 52;
         int playersPerLine = 5;
@@ -145,6 +197,7 @@ public class Game extends JPanel {
 
         }
     }
+
 
     private void  Move () {
         new Move(tileMap,this,playersList,mainPlayer);
