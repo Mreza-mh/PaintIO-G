@@ -200,7 +200,7 @@ public class Game extends JPanel {
 
 
     private void  Move () {
-        new Move(tileMap,this,playersList,mainPlayer);
+        new MoveoWeapon(tileMap,this,playersList,mainPlayer);
     }
     // ----------------------------------------------------------------
     private class ScheduleTask extends TimerTask {

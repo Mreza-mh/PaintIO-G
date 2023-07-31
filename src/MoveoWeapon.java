@@ -1,14 +1,13 @@
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
 import java.util.ArrayList;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
-public class Move {
 
-    public Move(TileMap tileMap, Game game, ArrayList<Player> playersList, MainPlayer mainPlayer) {
+public class MoveoWeapon {
+
+    private static int enterCount = (13*(2))+2;
+
+    public MoveoWeapon(TileMap tileMap, Game game, ArrayList<Player> playersList, MainPlayer mainPlayer) {
 
         for (Player player : playersList) {
             if (player.isAlive) {
@@ -28,7 +27,12 @@ public class Move {
                                 case KeyEvent.VK_UP -> player.setDirection(8);
                                 case KeyEvent.VK_RIGHT -> player.setDirection(6);
                                 case KeyEvent.VK_DOWN -> player.setDirection(2);
-                                case KeyEvent.VK_SPACE -> space(mainPlayer.getX(), mainPlayer.getY(),playersList );
+                                case KeyEvent.VK_SPACE ->space(mainPlayer.getX(), mainPlayer.getY(),playersList ,mainPlayer);
+                                case KeyEvent.VK_ENTER->{if (enterCount > 0) {
+                                        enter(mainPlayer.getX(), mainPlayer.getY(), playersList, mainPlayer, tileMap);
+                                        enterCount --;
+                                    } else {
+                                        System.out.println("Finish");}break;}
 
                                 default -> {
                                 }
@@ -86,17 +90,11 @@ public class Move {
         }
     }
 
+// ------------- [weapon straight ] ------------------------
+ boolean timer = true;
+ ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 
-
-    boolean up = false;
-    boolean down = false;
-    boolean R = false;
-    boolean L = false;
-    boolean timer = true;
-    ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-
-
-    void space(int x, int y, ArrayList<Player> playersList) {
+    void space(int x, int y, ArrayList<Player> playersList , MainPlayer mainPlayer) {
         int xx = x;
         int yy = y;
 
@@ -105,22 +103,22 @@ public class Move {
             if (player instanceof MainPlayer) {
             } else {
                 if (timer) {
-                    if (player.getDirection() == 8) {
+                    if (mainPlayer.getDirection() == 8) {
                         if (player.getX() == xx && player.getY() <= yy) {
                             player.die();
                             startSwitching();
                         }
-                    }  if (player.getDirection() == 2) {
+                    }  if (mainPlayer.getDirection() == 2) {
                         if (player.getX() == xx && player.getY() >= yy) {
                             player.die();
                             startSwitching();
                         }
-                    }if (player.getDirection() == 6) {
+                    }if (mainPlayer.getDirection() == 6) {
                         if (player.getY() == yy && player.getX() >= xx) {
                             player.die();
                             startSwitching();
                         }
-                    }  if (player.getDirection() == 4) {
+                    }  if (mainPlayer.getDirection() == 4) {
                         if (player.getY() == yy && player.getX() <= xx) {
                             player.die();
                             startSwitching();
@@ -131,20 +129,82 @@ public class Move {
         }
     }
 
-
     public void startSwitching() {
         timer = false;
         System.out.println("off");
         executor.schedule(() -> {
             timer = true;
             System.out.println("ready to fire");
-        }, 3, TimeUnit.SECONDS);
+        }, 10, TimeUnit.SECONDS);
     }
 
+//*------------------[  weapon 3*3 ]---------------------------------
+
+ void enter(int x2, int y2, ArrayList<Player> playersList, MainPlayer mainPlayer, TileMap tileMap) {
+
+        int xx2 = x2;
+        int yy2 = y2;
+        for (Player player : playersList) {
+            if (player.isAlive) {
+
+                if (player instanceof MainPlayer) {
+                    if (mainPlayer.getDirection() == 8) {//up
+                        xx2 = x2;
+                        yy2 = y2 - 7;
+                    } else if (mainPlayer.getDirection() == 2) {//down
+                        xx2 = x2;
+                        yy2 = y2 + 7;
+                    } else if (mainPlayer.getDirection() == 6) {//R
+                        xx2 = x2 + 7;
+                        yy2 = y2;
+                    } else if (mainPlayer.getDirection() == 4) {//L
+                        xx2 = x2 - 7;
+                        yy2 = y2;
+                    }
+
+                } else {
+                    if (player.getX() <= (xx2 + 1) && player.getX() >= (xx2 - 1) &&
+                            player.getY() <= (yy2 + 1) && player.getY() >= (yy2 - 1)) {
+                        player.die();
+                    }
+                }
+            }
+        }
+
+        for (Player player : playersList) {
+            if (player.isAlive) {
+
+                if (player instanceof MainPlayer) {
+                    if (mainPlayer.getDirection() == 8) {//up
+                        xx2 = x2;
+                        yy2 = y2 - 7;
+                    } else if (mainPlayer.getDirection() == 2) {//down
+                        xx2 = x2;
+                        yy2 = y2 + 7;
+                    } else if (mainPlayer.getDirection() == 6) {//R
+                        xx2 = x2 + 7;
+                        yy2 = y2;
+                    } else if (mainPlayer.getDirection() == 4) {//L
+                        xx2 = x2 - 7;
+                        yy2 = y2;
+                    }
+
+                    ArrayList<Tile> weaponA = new ArrayList<>();
+                    for (int i = (xx2 - 1); i <= (xx2 + 1); i++)
+                        for (int j = (yy2 - 1); j <= (yy2 + 1); j++) {
+                            weaponA.add(tileMap.getTile(i, j));
+                        }
+                    for (Tile tile : weaponA) {
+                        tile.setOwner(player);
+                        player.getOwnedTiles().add(tile);
+                    }
+                }
+            }
+        }
+    }
+ }
 
 
-
-}
 
 
 
