@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="26b51daa-871d-4273-bea1-2079917b4811" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Move$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Move$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Move.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Move.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveoWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -72,7 +70,9 @@
       <workItem from="1690568662958" duration="1567000" />
       <workItem from="1690625893287" duration="20174000" />
       <workItem from="1690708719756" duration="6000" />
-      <workItem from="1690709028517" duration="12057000" />
+      <workItem from="1690709028517" duration="12582000" />
+      <workItem from="1690801301006" duration="4166000" />
+      <workItem from="1690891995707" duration="1225000" />
     </task>
     <task id="LOCAL-00001" summary="Death codes">
       <created>1690712463046</created>
@@ -95,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690745685076</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add a Secound Weapon">
+      <created>1690762174055</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690762174055</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +112,7 @@
     <MESSAGE value="Death codes" />
     <MESSAGE value="Change SemiCircle to Pac-Man" />
     <MESSAGE value="Weapon B" />
-    <option name="LAST_COMMIT_MESSAGE" value="Weapon B" />
+    <MESSAGE value="Add a Secound Weapon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a Secound Weapon" />
   </component>
 </project>

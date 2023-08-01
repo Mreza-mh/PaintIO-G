@@ -25,7 +25,6 @@ public class Player {
     public void setY(int y) {this.y = y;}
 
     public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
 
     public int getDirection() {return Direction;}
     public void setDirection(int direction) {Direction = direction;}
@@ -37,7 +36,6 @@ ArrayList<Tile> ownedTiles = new ArrayList<>();
 ArrayList<Tile> radTiles = new ArrayList<>();
 
     public ArrayList<Tile> getOwnedTiles() {return ownedTiles;}
-    public void setOwnedTiles(ArrayList<Tile> ownedTiles) {this.ownedTiles = ownedTiles;}
 
 
     public void processMovement(TileMap tileMap, ArrayList<Player> playersList) {
@@ -48,9 +46,25 @@ ArrayList<Tile> radTiles = new ArrayList<>();
                 tile.setRad(this);
                 radTiles.add(tile);
             } else if (tile.getOwner() == null && tile.getRad() != this) {
+
                 tile.getRad().die();
                 tile.setRad(this);
+
+            }else if((this==tile.getOwner()) && (radTiles!=null)) {
+
+                for (Tile w:radTiles) {
+                    w.setRad(null);
+                    w.setOwner(this);
+                    ownedTiles.add(w);
+                }
+                radTiles.clear();
+
+
+
             }
+
+
+
         }
     }
 
