@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="26b51daa-871d-4273-bea1-2079917b4811" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,12 @@
       <workItem from="1690708719756" duration="6000" />
       <workItem from="1690709028517" duration="12582000" />
       <workItem from="1690801301006" duration="4166000" />
-      <workItem from="1690891995707" duration="1225000" />
+      <workItem from="1690891995707" duration="2985000" />
+      <workItem from="1690997575677" duration="862000" />
+      <workItem from="1691072392427" duration="697000" />
+      <workItem from="1691098221058" duration="595000" />
+      <workItem from="1691156850148" duration="1870000" />
+      <workItem from="1691263397762" duration="5457000" />
     </task>
     <task id="LOCAL-00001" summary="Death codes">
       <created>1690712463046</created>
@@ -102,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690762174055</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Convert rad to Owner">
+      <created>1690906613765</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690906613766</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +127,7 @@
     <MESSAGE value="Change SemiCircle to Pac-Man" />
     <MESSAGE value="Weapon B" />
     <MESSAGE value="Add a Secound Weapon" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a Secound Weapon" />
+    <MESSAGE value="Convert rad to Owner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert rad to Owner" />
   </component>
 </project>

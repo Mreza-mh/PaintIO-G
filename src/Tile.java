@@ -7,7 +7,6 @@ public class Tile {
     Player rad;
 
 
-
     public Tile(int x, int y) {
         this.x = x;
         this.y = y;
@@ -22,6 +21,9 @@ public class Tile {
 
     public Player getRad() {return rad;}
     public void setRad(Player rad) {this.rad = rad;}
+
+    public int getX() {return x;}
+    public int getY() {return y;}
 
 
     public Color getColor() {
@@ -50,5 +52,13 @@ public class Tile {
         }
     }
 
+
+    @Override
+    public String toString() {
+        return "Tile{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 
 }
