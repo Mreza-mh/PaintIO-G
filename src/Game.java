@@ -15,6 +15,7 @@ public class Game extends JPanel {
     final int colsCount = 51;
 
     String selectedShapee;
+    boolean active;
 
     private ArrayList<Player> playersList = new ArrayList<>();
 
@@ -65,10 +66,10 @@ public class Game extends JPanel {
         timer.scheduleAtFixedRate(new ScheduleTask(), INITIAL_DELAY, PERIOD_INTERVAL);
 
 //---------------- Menu input
-        if (isActive) { System.out.println("falsee");
-        } else {
-            System.out.println("falsee");
-        }
+        if (isActive) {
+            active=false;
+        }  else  {
+            active=true;}
 
         selectedShapee = selectedShape;
 
@@ -200,7 +201,12 @@ public class Game extends JPanel {
 
 
     private void  Move () {
-        new MoveoWeapon(tileMap,this,playersList,mainPlayer);
+        if (!active) {
+            new MoveoWeapon(tileMap, this, playersList, mainPlayer);
+        }
+        else {
+            System.out.println("active");
+        }
     }
     // ----------------------------------------------------------------
     private class ScheduleTask extends TimerTask {

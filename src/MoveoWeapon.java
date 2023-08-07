@@ -42,16 +42,15 @@ public class MoveoWeapon {
 
                     if (mainPlayer.Direction == 8) {
                         mainPlayer.setY((mainPlayer.getY() - 1));
-                        //  break;
+
                     } else if (mainPlayer.Direction == 2) {
                         mainPlayer.setY((mainPlayer.getY() + 1));
-                        //  break;
+
                     } else if (mainPlayer.Direction == 6) {
                         mainPlayer.setX((mainPlayer.getX() + 1));
-                        // break;
+
                     } else if (mainPlayer.Direction == 4) {
                         mainPlayer.setX((mainPlayer.getX() - 1));
-                        // break;
                     }
 
                 }

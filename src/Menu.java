@@ -82,12 +82,13 @@ public class Menu extends JPanel{
         activeButton.setFont(new Font(null, Font.ITALIC , 30));
         activeButton.setFocusPainted(false);
         activeButton.setBorderPainted(false);
-        activeButton.setBackground(Color.GREEN);
-        activeButton.setForeground(Color.WHITE);
         activeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 isActive = activeButton.isSelected();
+                activeButton.setBackground(Color.GREEN);
+
             }
         });
 
