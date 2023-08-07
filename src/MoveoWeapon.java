@@ -1,11 +1,14 @@
 import java.awt.event.*;
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.concurrent.*;
-
+import java.util.Random;
 
 public class MoveoWeapon {
 
-    private static int enterCount = (13*(2))+2;
+ private static int enterCount = (13*(2))+2;
+ private static LocalDateTime lastSpacePressTime;
+
 
     public MoveoWeapon(TileMap tileMap, Game game, ArrayList<Player> playersList, MainPlayer mainPlayer) {
 
@@ -27,12 +30,20 @@ public class MoveoWeapon {
                                 case KeyEvent.VK_UP -> player.setDirection(8);
                                 case KeyEvent.VK_RIGHT -> player.setDirection(6);
                                 case KeyEvent.VK_DOWN -> player.setDirection(2);
-                                case KeyEvent.VK_SPACE ->space(mainPlayer.getX(), mainPlayer.getY(),playersList ,mainPlayer);
+                                case KeyEvent.VK_SPACE -> {
+                                    LocalDateTime currentTime = LocalDateTime.now();
+                                    if (lastSpacePressTime == null || Duration.between(lastSpacePressTime, currentTime).getSeconds() >= 3) {
+                                        space(mainPlayer.getX(), mainPlayer.getY(), playersList, mainPlayer);
+                                        lastSpacePressTime = currentTime;
+                                    }
+                                }
                                 case KeyEvent.VK_ENTER->{if (enterCount > 0) {
                                         enter(mainPlayer.getX(), mainPlayer.getY(), playersList, mainPlayer, tileMap);
                                         enterCount --;
                                     } else {
-                                        System.out.println("Finish");}break;}
+                                        System.out.println("Finish");}
+                                    break;
+                                }
 
                                 default -> {
                                 }
@@ -55,11 +66,12 @@ public class MoveoWeapon {
 
                 }
 
-                //***********************
+                //**************************
                 else {
-                    int random = ThreadLocalRandom.current().nextInt(15) + 1;
+                    Random rand = new Random();
+                    int rando = rand.nextInt(15);
 
-                    switch (random) {
+                    switch (rando) {
                         case 1 -> player.setDirection(6);
                         case 2 -> player.setDirection(4);
                         case 3 -> player.setDirection(8);
@@ -90,8 +102,6 @@ public class MoveoWeapon {
     }
 
 // ------------- [weapon straight ] ------------------------
- boolean timer = true;
- ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 
     void space(int x, int y, ArrayList<Player> playersList , MainPlayer mainPlayer) {
         int xx = x;
@@ -101,42 +111,29 @@ public class MoveoWeapon {
 
             if (player instanceof MainPlayer) {
             } else {
-                if (timer) {
-                    if (mainPlayer.getDirection() == 8) {
-                        if (player.getX() == xx && player.getY() <= yy) {
-                            player.die();
-                            startSwitching();
-                        }
-                    }  if (mainPlayer.getDirection() == 2) {
-                        if (player.getX() == xx && player.getY() >= yy) {
-                            player.die();
-                            startSwitching();
-                        }
-                    }if (mainPlayer.getDirection() == 6) {
-                        if (player.getY() == yy && player.getX() >= xx) {
-                            player.die();
-                            startSwitching();
-                        }
-                    }  if (mainPlayer.getDirection() == 4) {
-                        if (player.getY() == yy && player.getX() <= xx) {
-                            player.die();
-                            startSwitching();
-                        }
+                if (mainPlayer.getDirection() == 8) {
+                    if (player.getX() == xx && player.getY() <= yy) {
+                        player.die();
+                    }
+                }
+                if (mainPlayer.getDirection() == 2) {
+                    if (player.getX() == xx && player.getY() >= yy) {
+                        player.die();
+                    }
+                }
+                if (mainPlayer.getDirection() == 6) {
+                    if (player.getY() == yy && player.getX() >= xx) {
+                        player.die();
+                    }
+                }
+                if (mainPlayer.getDirection() == 4) {
+                    if (player.getY() == yy && player.getX() <= xx) {
+                        player.die();
                     }
                 }
             }
         }
     }
-
-    public void startSwitching() {
-        timer = false;
-        System.out.println("off");
-        executor.schedule(() -> {
-            timer = true;
-            System.out.println("ready to fire");
-        }, 10, TimeUnit.SECONDS);
-    }
-
 //*------------------[  weapon 3*3 ]---------------------------------
 
  void enter(int x2, int y2, ArrayList<Player> playersList, MainPlayer mainPlayer, TileMap tileMap) {
@@ -201,7 +198,8 @@ public class MoveoWeapon {
             }
         }
     }
- }
+
+}
 
 
 

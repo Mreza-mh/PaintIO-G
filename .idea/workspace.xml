@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="26b51daa-871d-4273-bea1-2079917b4811" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu$ShapeSelectionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu$ShapeSelectionListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Game$ScheduleTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Game$ScheduleTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MoveoWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveoWeapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +81,8 @@
       <workItem from="1691098221058" duration="595000" />
       <workItem from="1691156850148" duration="1870000" />
       <workItem from="1691263397762" duration="5457000" />
-      <workItem from="1691352313708" duration="876000" />
+      <workItem from="1691352313708" duration="1581000" />
+      <workItem from="1691422825154" duration="1468000" />
     </task>
     <task id="LOCAL-00001" summary="Death codes">
       <created>1690712463046</created>
@@ -122,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690906613766</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix Active Button Bug">
+      <created>1691366635445</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1691366635445</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +138,7 @@
     <MESSAGE value="Weapon B" />
     <MESSAGE value="Add a Secound Weapon" />
     <MESSAGE value="Convert rad to Owner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Convert rad to Owner" />
+    <MESSAGE value="Fix Active Button Bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Active Button Bug" />
   </component>
 </project>

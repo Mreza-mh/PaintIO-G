@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 import java.util.Timer;
-import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Game extends JPanel {
@@ -40,10 +39,10 @@ public class Game extends JPanel {
 
         for (Player player : playersList) {
 
-            Random r = new Random();
+            Random rand = new Random();
 
-            player.setX(r.nextInt(150) + 3000);
-            player.setY(r.nextInt(150) + 3000);
+            player.setX(rand.nextInt(150) + 3000);
+            player.setY(rand.nextInt(150) + 3000);
 
             ArrayList<Tile> startTiles = new ArrayList<>();
 
@@ -117,7 +116,8 @@ public class Game extends JPanel {
                 g.drawString(player.getName(), drawX - (unitSize / 2), (drawY + (2 * unitSize)));
 
                 //--------------------shape
-                int random = ThreadLocalRandom.current().nextInt(2) + 1;
+                Random rand = new Random();
+                int rando = rand.nextInt(2)+1;
 
                 if (selectedShapee == "Square") {
                     g.fillRect(drawX, drawY, unitSize, unitSize);
@@ -126,7 +126,7 @@ public class Game extends JPanel {
                 } else if (selectedShapee == "Pac-Man") {
                     //----------------------------------------------------------------------------------------------------------
                     if (player.getDirection() == 8) {
-                        switch (random) {
+                        switch (rando) {
                             case 1 -> {
                                 g.fillArc(drawX, drawY, unitSize, unitSize, 140, 180);
                                 g.fillArc(drawX, drawY, unitSize, unitSize, 220, 180);
@@ -137,7 +137,7 @@ public class Game extends JPanel {
                             }
                         }
                     } else if (player.getDirection() == 6) {
-                        switch (random) {
+                        switch (rando) {
                             case 1 -> {
                                 g.fillArc(drawX, drawY, unitSize, unitSize, 50, 180);
                                 g.fillArc(drawX, drawY, unitSize, unitSize, 130, 180);
@@ -148,7 +148,7 @@ public class Game extends JPanel {
                             }
                         }
                     } else if (player.getDirection() == 4) {
-                        switch (random) {
+                        switch (rando) {
                             case 1 -> {
                                 g.fillArc(drawX, drawY, unitSize, unitSize, 230, 180);
                                 g.fillArc(drawX, drawY, unitSize, unitSize, 310, 180);
@@ -160,7 +160,7 @@ public class Game extends JPanel {
                         }
 
                     } else if (player.getDirection() == 2) {
-                        switch (random) {
+                        switch (rando) {
                             case 1 -> {
                                 g.fillArc(drawX, drawY, unitSize, unitSize, 330, 180);
                                 g.fillArc(drawX, drawY, unitSize, unitSize, 30, 180);
