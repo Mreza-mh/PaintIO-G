@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class Menu extends JPanel{
  private int botCount = 6;
@@ -56,7 +55,7 @@ public class Menu extends JPanel{
         shapeLabel.setForeground(labelColor);
         shapeLabel.setFont(labelFont);
 
-        JRadioButton rectangleButton = new JRadioButton("Square");
+        JRadioButton rectangleButton = new JRadioButton("3-Par");
         JRadioButton circleButton = new JRadioButton("Circle");
         JRadioButton triangleButton = new JRadioButton("Pac-Man");
 

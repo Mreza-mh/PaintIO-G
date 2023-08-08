@@ -1,5 +1,9 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 import java.util.Timer;
 
@@ -13,12 +17,11 @@ public class Game extends JPanel {
     final int rowsCount = 35;
     final int colsCount = 51;
 
+    public static BufferedImage image;
     String selectedShapee;
     boolean active;
 
     private ArrayList<Player> playersList = new ArrayList<>();
-
-
     public Game() {
         tileMap = new TileMap();
     }
@@ -119,8 +122,14 @@ public class Game extends JPanel {
                 Random rand = new Random();
                 int rando = rand.nextInt(2)+1;
 
-                if (selectedShapee == "Square") {
-                    g.fillRect(drawX, drawY, unitSize, unitSize);
+                try {
+                    image = ImageIO.read(new File("src\\img\\rsz_apex-arena-rank.jpg"));
+                } catch (IOException e) {
+                    g.fillRect(drawX, drawY, unitSize, unitSize);}
+
+
+                if (selectedShapee == "3-Par") {
+                    g.drawImage(image,drawX, drawY,null);
                 } else if (selectedShapee == "Circle") {
                     g.fillOval(drawX, drawY, unitSize, unitSize);
                 } else if (selectedShapee == "Pac-Man") {
@@ -171,14 +180,14 @@ public class Game extends JPanel {
 // header
         int s = 0;
         int h = 52;
-        int playersPerLine = 5;
+        int playersPerLine = 4;
         int playerCount = 0;
 
         for (Player player : playersList) {
             if (player.isAlive) {
 
-                g.drawString(player.getName() + "|| " + (player.getX() - 3000) + "," + (player.getY() - 3000), s, h);
-                s += 300;
+                g.drawString(player.getName() + ": " + (player.getX() - 3000) + "," + (player.getY() - 3000)+"|| P : "+( player.ownedTiles.size()), s, h);
+                s += 375;
                 playerCount++;
 
                 if (playerCount == playersPerLine) {

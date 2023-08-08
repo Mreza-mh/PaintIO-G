@@ -1,7 +1,5 @@
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Stack;
-
+import java.util.*;
 
 public class Player {
 
@@ -56,9 +54,10 @@ ArrayList<Tile> radTiles = new ArrayList<>();
                 for (Tile w:radTiles) {
                     w.setRad(null);
                     w.setOwner(this);
+                    if (!(ownedTiles.contains(w))){
                     ownedTiles.add(w);
-                }
-
+                }}
+                radTiles.clear();
                 coloring(tileMap);
 
 

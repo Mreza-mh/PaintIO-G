@@ -6,7 +6,7 @@ public class Enemy extends Player {
     public Enemy() {super("");
 
         this.name = (names[new Random().nextInt(names.length)]+
-                ThreadLocalRandom.current().nextInt(100));
+                ThreadLocalRandom.current().nextInt(10));
 
     }
 

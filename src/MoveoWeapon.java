@@ -1,8 +1,6 @@
 import java.awt.event.*;
-import java.time.Duration;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Random;
+import java.time.*;
+import java.util.*;
 
 public class MoveoWeapon {
 

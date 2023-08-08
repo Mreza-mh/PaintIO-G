@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26b51daa-871d-4273-bea1-2079917b4811" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SmartMove.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Game$ScheduleTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Game$ScheduleTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu$ShapeSelectionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu$ShapeSelectionListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MoveoWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveoWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SmartMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartMove.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +99,7 @@
       <workItem from="1691263397762" duration="5457000" />
       <workItem from="1691352313708" duration="1581000" />
       <workItem from="1691422825154" duration="3614000" />
-      <workItem from="1691491178590" duration="5030000" />
+      <workItem from="1691491178590" duration="11410000" />
     </task>
     <task id="LOCAL-00001" summary="Death codes">
       <created>1690712463046</created>
@@ -142,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691424564249</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Launch SmartMove">
+      <created>1691498423546</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1691498423546</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +171,7 @@
     <MESSAGE value="Convert rad to Owner" />
     <MESSAGE value="Fix Active Button Bug" />
     <MESSAGE value="Fix Timer Bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Timer Bug" />
+    <MESSAGE value="Launch SmartMove" />
+    <option name="LAST_COMMIT_MESSAGE" value="Launch SmartMove" />
   </component>
 </project>
