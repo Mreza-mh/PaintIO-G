@@ -78,7 +78,7 @@ public class Menu extends JPanel{
 
 
         // Active Button
-        JToggleButton activeButton = new JToggleButton("Active Hoosh");
+        JToggleButton activeButton = new JToggleButton("Active Smart Move");
         activeButton.setFont(new Font(null, Font.ITALIC , 30));
         activeButton.setFocusPainted(false);
         activeButton.setBorderPainted(false);

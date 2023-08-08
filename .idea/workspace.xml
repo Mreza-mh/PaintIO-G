@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26b51daa-871d-4273-bea1-2079917b4811" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/SmartMove.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Game$ScheduleTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Game$ScheduleTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MoveoWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveoWeapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +25,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -82,7 +90,8 @@
       <workItem from="1691156850148" duration="1870000" />
       <workItem from="1691263397762" duration="5457000" />
       <workItem from="1691352313708" duration="1581000" />
-      <workItem from="1691422825154" duration="1468000" />
+      <workItem from="1691422825154" duration="3614000" />
+      <workItem from="1691491178590" duration="5030000" />
     </task>
     <task id="LOCAL-00001" summary="Death codes">
       <created>1690712463046</created>
@@ -126,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691366635445</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix Timer Bug">
+      <created>1691424564249</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1691424564249</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +155,7 @@
     <MESSAGE value="Add a Secound Weapon" />
     <MESSAGE value="Convert rad to Owner" />
     <MESSAGE value="Fix Active Button Bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Active Button Bug" />
+    <MESSAGE value="Fix Timer Bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Timer Bug" />
   </component>
 </project>

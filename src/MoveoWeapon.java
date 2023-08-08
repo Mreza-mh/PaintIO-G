@@ -134,6 +134,7 @@ public class MoveoWeapon {
             }
         }
     }
+
 //*------------------[  weapon 3*3 ]---------------------------------
 
  void enter(int x2, int y2, ArrayList<Player> playersList, MainPlayer mainPlayer, TileMap tileMap) {

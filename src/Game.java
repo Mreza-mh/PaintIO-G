@@ -128,46 +128,38 @@ public class Game extends JPanel {
                     if (player.getDirection() == 8) {
                         switch (rando) {
                             case 1 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 140, 180);
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 220, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 140, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 220, 180);
                             }
                             case 2 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 100, 180);
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 260, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 100, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 260, 180);
                             }
                         }
                     } else if (player.getDirection() == 6) {
                         switch (rando) {
                             case 1 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 50, 180);
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 130, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 50, 180);       g.fillArc(drawX, drawY, unitSize, unitSize, 130, 180);
                             }
                             case 2 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 10, 180);
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 170, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 10, 180);       g.fillArc(drawX, drawY, unitSize, unitSize, 170, 180);
                             }
                         }
                     } else if (player.getDirection() == 4) {
                         switch (rando) {
                             case 1 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 230, 180);
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 310, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 230, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 310, 180);
                             }
                             case 2 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 190, 180);
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 350, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 190, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 350, 180);
                             }
                         }
 
                     } else if (player.getDirection() == 2) {
                         switch (rando) {
                             case 1 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 330, 180);
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 30, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 330, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 30, 180);
                             }
                             case 2 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 290, 180);
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 70, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 290, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 70, 180);
                             }
                         }
                     }
@@ -205,7 +197,7 @@ public class Game extends JPanel {
             new MoveoWeapon(tileMap, this, playersList, mainPlayer);
         }
         else {
-            System.out.println("active");
+            new SmartMove(tileMap, this, playersList, mainPlayer);
         }
     }
     // ----------------------------------------------------------------
