@@ -12,7 +12,6 @@ public class MoveoWeapon {
 
             if (player.isAlive) {
 
-
                 if (player instanceof MainPlayer) {
 
                     game.setFocusable(true);
