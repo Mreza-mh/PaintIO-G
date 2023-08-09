@@ -4,6 +4,4 @@ public class MainPlayer extends Player {
         super(username);
     }
 
-
-
 }

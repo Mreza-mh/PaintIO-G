@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26b51daa-871d-4273-bea1-2079917b4811" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/img/rsz_apex-arena-rank.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PaintIOG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PaintIOG.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Enemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Game$ScheduleTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Game$ScheduleTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu$ShapeSelectionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu$ShapeSelectionListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintIOG/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintIOG/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MoveoWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveoWeapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SmartMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartMove.java" afterDir="false" />
@@ -46,21 +45,24 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2TDDGAY6lvgjZ8w60enNR11QtiC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jlayer-1.0.1.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -99,7 +101,9 @@
       <workItem from="1691263397762" duration="5457000" />
       <workItem from="1691352313708" duration="1581000" />
       <workItem from="1691422825154" duration="3614000" />
-      <workItem from="1691491178590" duration="11410000" />
+      <workItem from="1691491178590" duration="11775000" />
+      <workItem from="1691542000554" duration="350000" />
+      <workItem from="1691595748541" duration="1134000" />
     </task>
     <task id="LOCAL-00001" summary="Death codes">
       <created>1690712463046</created>
@@ -157,13 +161,21 @@
       <option name="project" value="LOCAL" />
       <updated>1691498423546</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add point &amp; image">
+      <created>1691505177710</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1691505177710</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Death codes" />
     <MESSAGE value="Change SemiCircle to Pac-Man" />
     <MESSAGE value="Weapon B" />
@@ -172,6 +184,7 @@
     <MESSAGE value="Fix Active Button Bug" />
     <MESSAGE value="Fix Timer Bug" />
     <MESSAGE value="Launch SmartMove" />
-    <option name="LAST_COMMIT_MESSAGE" value="Launch SmartMove" />
+    <MESSAGE value="Add point &amp; image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add point &amp; image" />
   </component>
 </project>

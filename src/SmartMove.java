@@ -8,9 +8,8 @@ public class SmartMove {
   private static LocalDateTime lastSpacePressTime;
   static int size ;
 
-    public SmartMove(TileMap tileMap, Game game, ArrayList<Player> playersList, MainPlayer mainPlayer) {
+    public SmartMove(TileMap tileMap, Game game, ArrayList<Player> playersList, MainPlayer mainPlayer,Player player) {
 
-        for (Player player : playersList) {
             if (player.isAlive) {
 
                 if (player instanceof MainPlayer) {
@@ -187,10 +186,9 @@ public class SmartMove {
                     }
                 }
             }
-        }
-        for (Player player : playersList) {
+
             player.processMovement(tileMap, playersList);
-        }
+
 
     }
 

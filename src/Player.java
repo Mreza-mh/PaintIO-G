@@ -1,5 +1,11 @@
 import java.awt.*;
+import java.io.FileInputStream;
 import java.util.*;
+import javazoom.jl.decoder.Bitstream;
+import javazoom.jl.player.advanced.AdvancedPlayer;
+import javazoom.jl.player.advanced.PlaybackEvent;
+import javazoom.jl.player.advanced.PlaybackListener;
+
 
 public class Player {
 
@@ -153,6 +159,41 @@ ArrayList<Tile> radTiles = new ArrayList<>();
             ownedTiles.add(c);
         }
     }
+
+
+
+
+    public static void finishMP3(String mp3FilePath,MainPlayer mainPlayer) {
+        try {
+            FileInputStream fileInputStream = new FileInputStream(mp3FilePath);
+            Bitstream bitstream = new Bitstream(fileInputStream);
+
+            AdvancedPlayer playeer = new AdvancedPlayer(fileInputStream);
+
+            playeer.setPlayBackListener(new PlaybackListener() {
+                @Override
+                public void playbackFinished(PlaybackEvent evt) {
+                    System.out.println("Finish    "+"your score :  "+(mainPlayer.ownedTiles.size()));
+                    if (mainPlayer.ownedTiles.size()<50){
+                        System.out.println("poor");  }
+                    if ((mainPlayer.ownedTiles.size()>=50) && (200> mainPlayer.ownedTiles.size())){  System.out.println("bad");   }
+                    if ((mainPlayer.ownedTiles.size()>=200) && (1000>mainPlayer.ownedTiles.size())){   System.out.println("not bad");  }
+                    if ((mainPlayer.ownedTiles.size()>=1000) && (3000>mainPlayer.ownedTiles.size())){  System.out.println("good");  }
+                    if ((mainPlayer.ownedTiles.size()>=3000) && (8000>mainPlayer.ownedTiles.size())){  System.out.println("nice");  }
+                    if ( mainPlayer.ownedTiles.size()>=80000){   System.out.println("Hero");  }
+                }
+            });
+
+            playeer.play();
+
+            System.exit(0);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 
 
 

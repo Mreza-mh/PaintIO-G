@@ -10,6 +10,7 @@ import java.util.Timer;
 
 public class Game extends JPanel {
 
+    Player player;
     private TileMap tileMap;
     private MainPlayer mainPlayer;
 
@@ -137,38 +138,46 @@ public class Game extends JPanel {
                     if (player.getDirection() == 8) {
                         switch (rando) {
                             case 1 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 140, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 220, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 140, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 220, 180);
                             }
                             case 2 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 100, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 260, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 100, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 260, 180);
                             }
                         }
                     } else if (player.getDirection() == 6) {
                         switch (rando) {
                             case 1 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 50, 180);       g.fillArc(drawX, drawY, unitSize, unitSize, 130, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 50, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 130, 180);
                             }
                             case 2 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 10, 180);       g.fillArc(drawX, drawY, unitSize, unitSize, 170, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 10, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 170, 180);
                             }
                         }
                     } else if (player.getDirection() == 4) {
                         switch (rando) {
                             case 1 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 230, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 310, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 230, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 310, 180);
                             }
                             case 2 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 190, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 350, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 190, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 350, 180);
                             }
                         }
 
                     } else if (player.getDirection() == 2) {
                         switch (rando) {
                             case 1 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 330, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 30, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 330, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 30, 180);
                             }
                             case 2 -> {
-                                g.fillArc(drawX, drawY, unitSize, unitSize, 290, 180);      g.fillArc(drawX, drawY, unitSize, unitSize, 70, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 290, 180);
+                                g.fillArc(drawX, drawY, unitSize, unitSize, 70, 180);
                             }
                         }
                     }
@@ -186,6 +195,7 @@ public class Game extends JPanel {
         for (Player player : playersList) {
             if (player.isAlive) {
 
+                g.setColor(Color.black);
                 g.drawString(player.getName() + ": " + (player.getX() - 3000) + "," + (player.getY() - 3000)+"|| P : "+( player.ownedTiles.size()), s, h);
                 s += 375;
                 playerCount++;
@@ -202,12 +212,23 @@ public class Game extends JPanel {
 
 
     private void  Move () {
-        if (!active) {
-            new MoveoWeapon(tileMap, this, playersList, mainPlayer);
+        for (Player player : playersList) {
+
+            if (!active) {
+                new MoveoWeapon(tileMap, this, playersList, mainPlayer, player);
+            } else {
+                new SmartMove(tileMap, this, playersList, mainPlayer, player);
+            }
+
+            if (player instanceof MainPlayer) {
+                if (!(mainPlayer.isAlive)){
+                    player.finishMP3("src/img/Game-Over-Sound-Effect-1.mp3",mainPlayer);
+                }
+            }
+
+
         }
-        else {
-            new SmartMove(tileMap, this, playersList, mainPlayer);
-        }
+
     }
     // ----------------------------------------------------------------
     private class ScheduleTask extends TimerTask {

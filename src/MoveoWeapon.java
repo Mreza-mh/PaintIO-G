@@ -8,9 +8,8 @@ public class MoveoWeapon {
  private static LocalDateTime lastSpacePressTime;
 
 
-    public MoveoWeapon(TileMap tileMap, Game game, ArrayList<Player> playersList, MainPlayer mainPlayer) {
+    public MoveoWeapon(TileMap tileMap, Game game, ArrayList<Player> playersList, MainPlayer mainPlayer,Player player) {
 
-        for (Player player : playersList) {
             if (player.isAlive) {
 
 
@@ -92,11 +91,10 @@ public class MoveoWeapon {
                     }
                 }
             }
-        }
 
-        for (Player player : playersList) {
+
             player.processMovement(tileMap, playersList);
-        }
+
     }
 
 // ------------- [weapon straight ] ------------------------
