@@ -2,9 +2,7 @@ import java.awt.*;
 import java.io.FileInputStream;
 import java.util.*;
 import javazoom.jl.decoder.Bitstream;
-import javazoom.jl.player.advanced.AdvancedPlayer;
-import javazoom.jl.player.advanced.PlaybackEvent;
-import javazoom.jl.player.advanced.PlaybackListener;
+import javazoom.jl.player.advanced.*;
 
 
 public class Player {

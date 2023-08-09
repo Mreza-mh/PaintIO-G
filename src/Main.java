@@ -15,7 +15,7 @@ public class Main extends JFrame {
 
 
     private void UI() {
-        setSize(1500, 1035);
+        setSize(1490, 1035);
         setResizable(true);
         setVisible(true);
         setTitle("PAINT IO");

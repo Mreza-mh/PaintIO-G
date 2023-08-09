@@ -48,7 +48,7 @@ public class Tile {
         else if ((x + y) % 2 == 0) {
             return Color.white;
         } else {
-            return (new Color(100,140,220,100));
+            return (new Color(80,130,220,100));
         }
     }
 
