@@ -48,8 +48,11 @@ ArrayList<Tile> radTiles = new ArrayList<>();
 
             Tile tile = tileMap.getTile(x, y);
             if (tile.getOwner() != this && tile.getRad() == null) {
+                tile.setRad(null);
+                tile.setOwner(null);
                 tile.setRad(this);
                 radTiles.add(tile);
+
             } else if (tile.getOwner() == null && tile.getRad() != this) {
 
                 tile.getRad().die();
@@ -64,7 +67,7 @@ ArrayList<Tile> radTiles = new ArrayList<>();
                     ownedTiles.add(w);
                 }}
                 radTiles.clear();
-                coloring(tileMap);
+                coloring(tileMap,playersList);
 
 
             }
@@ -87,7 +90,7 @@ ArrayList<Tile> radTiles = new ArrayList<>();
     }
 
 
-    void coloring(TileMap tileMap) {
+    void coloring(TileMap tileMap,ArrayList<Player> playersList) {
 
         int maxX = Integer.MIN_VALUE;
         int minX = Integer.MAX_VALUE;
@@ -151,6 +154,13 @@ ArrayList<Tile> radTiles = new ArrayList<>();
                 visited.clear();
             }
         }
+
+        for (Player player : playersList) {
+            if (inside.contains(tileMap.getTile(player.getX(),player.getY()))){
+                player.die();
+            }
+        }
+
 
         for (Tile c : inside) {
             c.setOwner(null);

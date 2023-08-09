@@ -10,7 +10,6 @@ import java.util.Timer;
 
 public class Game extends JPanel {
 
-    Player player;
     private TileMap tileMap;
     private MainPlayer mainPlayer;
 
